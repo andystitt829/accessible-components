@@ -1,0 +1,41 @@
+:root {
+    /* Block Editor Colors */
+    --white: #FFFFFF;
+    --light-blue: #B3EFFF;
+    --bright-blue: #00CFFF;
+    --medium-blue: #046B99;
+    --dark-blue: #1C304A;
+    --black: #000000;
+    --light-gray: #c2c2c2;
+}
+
+.default-button {
+    background-color: var(--medium-blue);
+    color: var(--white);
+    margin: .5rem;
+    padding: 1rem;
+}
+
+.default-button:hover, .default-button--hover {
+    background-color: var(--dark-blue);
+}
+
+.default-button:active, .default-button--active {
+    background-color: var(--black);
+}
+
+.default-button:focus, .default-focus {
+    outline: .25rem solid var(--medium-blue);
+    outline-offset: .25rem;
+}
+
+.default-button:disabled {
+    background-color: var(--light-gray);
+}
+
+.default-button--unstyled {
+    background-color: transparent;
+    border: 0;
+    color: var(--medium-blue);
+    text-decoration: underline;
+}
