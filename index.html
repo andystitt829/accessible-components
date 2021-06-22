@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accessible Components</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="scripts.js" defer></script>
 </head>
 <body>
     <header>
         <h1>Accessible Components</h1>
     </header>
     <main>
+
+        <!-- https://designsystem.digital.gov/components/button/ -->
         <h2>Buttons</h2>
         <button class="default-button">Default</button>
         <button class="default-button default-button--hover">Hover</button>
@@ -20,6 +23,47 @@
         <button class="default-button default-focus">Focus</button>
         <button class="default-button" disabled>Disabled</button>
         <button class="default-button default-button--unstyled">Unstyled button</button>
+
+        <!-- https://designsystem.digital.gov/components/alert/ -->
+        <h2>Alerts</h2>
+        <div class="default-alert" role="alert">
+            <div class="default-alert-body">
+                <h2 class="default-alert-heading">Default Alert Heading</h2>
+                <p class="default-alert-text">Default alert body text.</p>
+            </div>
+        </div>
+
+        <!-- https://www.aditus.io/patterns/accordion/ -->
+        <h2>Accordions</h2>
+            <h3>
+                <button id="accordion-header-1" 
+                    aria-expanded="true" 
+                    aria-controls="accordion-panel-1" 
+                    data-accordion-header
+                    >
+                  Item 1
+                </button>
+              </h3>
+              <section id="accordion-panel-1"
+                        aria-labelledby="accordion-header-1"
+                        >
+                <p>Lorem ipsum dolor sit amet...</p>
+              </section>
+              <h3>
+                <button id="accordion-header-2" 
+                    aria-expanded="false" 
+                    aria-controls="accordion-panel-2" 
+                    data-accordion-header
+                    >
+                  Item 2
+                </button>
+              </h3>
+            <section id="accordion-panel-2"
+                      aria-labelledby="accordion-header-2"
+                      hidden
+                      >
+              <p>Lorem ipsum dolor sit amet...</p>
+            </section>
     </main>
     <footer>
 
