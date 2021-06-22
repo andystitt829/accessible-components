@@ -9,6 +9,7 @@
     --light-gray: #c2c2c2;
 }
 
+/**** Buttons ****/
 .default-button {
     background-color: var(--medium-blue);
     color: var(--white);
@@ -38,4 +39,29 @@
     border: 0;
     color: var(--medium-blue);
     text-decoration: underline;
+}
+
+/**** Alerts ****/
+.default-alert {
+    background-color: var(--light-blue);
+    border-left: 10px solid var(--bright-blue);
+    color: var(--black);
+}
+
+.default-alert-body {
+    padding: 10px 20px;
+}
+
+/**** Accordions ****/
+.default-accordion {
+    color: var(--black);
+    width: 100%;
+}
+
+.default-accordion-button {
+    background-color: var(--light-gray);
+    border: 0;
+    padding: 10px;
+    text-align: left;
+    width: 100%;
 }
