@@ -1,67 +1,108 @@
 :root {
-    /* Block Editor Colors */
-    --white: #FFFFFF;
-    --light-blue: #B3EFFF;
-    --bright-blue: #00CFFF;
-    --medium-blue: #046B99;
-    --dark-blue: #1C304A;
-    --black: #000000;
-    --light-gray: #c2c2c2;
+  --white: #ffffff;
+  --light-blue: #b3efff;
+  --bright-blue: #00cfff;
+  --medium-blue: #046b99;
+  --dark-blue: #1c304a;
+  --black: #000000;
+  --light-gray: #c2c2c2;
 }
 
 /**** Buttons ****/
 .default-button {
-    background-color: var(--medium-blue);
-    color: var(--white);
-    margin: .5rem;
-    padding: 1rem;
+  background-color: var(--medium-blue);
+  color: var(--white);
+  margin: 0.5rem;
+  padding: 1rem;
 }
 
-.default-button:hover, .default-button--hover {
-    background-color: var(--dark-blue);
+.default-button:hover,
+.default-button--hover {
+  background-color: var(--dark-blue);
 }
 
-.default-button:active, .default-button--active {
-    background-color: var(--black);
+.default-button:active,
+.default-button--active {
+  background-color: var(--black);
 }
 
-.default-button:focus, .default-focus {
-    outline: .25rem solid var(--medium-blue);
-    outline-offset: .25rem;
+.default-button:focus,
+.default-focus {
+  outline: 0.25rem solid var(--medium-blue);
+  outline-offset: 0.25rem;
 }
 
 .default-button:disabled {
-    background-color: var(--light-gray);
+  background-color: var(--light-gray);
 }
 
 .default-button--unstyled {
-    background-color: transparent;
-    border: 0;
-    color: var(--medium-blue);
-    text-decoration: underline;
+  background-color: transparent;
+  border: 0;
+  color: var(--medium-blue);
+  text-decoration: underline;
 }
 
 /**** Alerts ****/
 .default-alert {
-    background-color: var(--light-blue);
-    border-left: 10px solid var(--bright-blue);
-    color: var(--black);
+  background-color: var(--light-blue);
+  border-left: 10px solid var(--bright-blue);
+  color: var(--black);
 }
 
 .default-alert-body {
-    padding: 10px 20px;
+  padding: 10px 20px;
 }
 
 /**** Accordions ****/
 .default-accordion {
-    color: var(--black);
-    width: 100%;
+  color: var(--black);
+  width: 100%;
 }
 
 .default-accordion-button {
-    background-color: var(--light-gray);
-    border: 0;
-    padding: 10px;
-    text-align: left;
-    width: 100%;
+  background-color: var(--light-gray);
+  border: 0;
+  padding: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+/**** Cards ****/
+.card-group {
+  list-style: none;
+  padding-left: 0;
+}
+
+.card__container {
+  color: #1b1b1b;
+  background-color: #fff;
+  font-family: Source Sans Pro Web, Helvetica Neue, Helvetica, Roboto, Arial,
+    sans-serif;
+  font-size: 1.06rem;
+  line-height: 1.5;
+  border-width: 2px;
+  border-color: #e6e6e6;
+  border-style: solid;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  position: relative;
+  border-radius: 0.25rem;
+}
+
+.card__header {
+  padding: 1.5rem 1.5rem 0.5rem;
+}
+
+.card__body {
+  flex: 1 1 0%;
+  padding: 0.5rem 1.5rem;
+  flex-basis: auto;
+}
+
+.card__footer {
+  padding: 0.5rem 1.5rem 1.5rem;
 }

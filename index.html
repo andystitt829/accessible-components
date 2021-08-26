@@ -1,72 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accessible Components</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script src="scripts.js" defer></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessible Components</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="scripts.js" defer></script>
 </head>
+
 <body>
-    <header>
-        <h1>Accessible Components</h1>
-    </header>
-    <main>
+  <header>
+    <h1>Accessible Components</h1>
+  </header>
+  <main>
 
-        <!-- https://designsystem.digital.gov/components/button/ -->
-        <h2>Buttons</h2>
-        <button class="default-button">Default</button>
-        <button class="default-button default-button--hover">Hover</button>
-        <button class="default-button default-button--active">Active</button>
-        <button class="default-button default-focus">Focus</button>
-        <button class="default-button" disabled>Disabled</button>
-        <button class="default-button default-button--unstyled">Unstyled button</button>
+    <!-- https://designsystem.digital.gov/components/button/ -->
+    <h2>Buttons</h2>
+    <button class="default-button">Default</button>
+    <button class="default-button default-button--hover">Hover</button>
+    <button class="default-button default-button--active">Active</button>
+    <button class="default-button default-focus">Focus</button>
+    <button class="default-button" disabled>Disabled</button>
+    <button class="default-button default-button--unstyled">Unstyled button</button>
 
-        <!-- https://designsystem.digital.gov/components/alert/ -->
-        <h2>Alerts</h2>
-        <div class="default-alert" role="alert">
-            <div class="default-alert-body">
-                <h2 class="default-alert-heading">Default Alert Heading</h2>
-                <p class="default-alert-text">Default alert body text.</p>
-            </div>
+    <!-- https://designsystem.digital.gov/components/alert/ -->
+    <h2>Alerts</h2>
+    <div class="default-alert" role="alert">
+      <div class="default-alert-body">
+        <h2 class="default-alert-heading">Default Alert Heading</h2>
+        <p class="default-alert-text">Default alert body text.</p>
+      </div>
+    </div>
+
+    <!-- https://www.aditus.io/patterns/accordion/ -->
+    <h2>Accordions</h2>
+    <h3>
+      <button id="accordion-header-1" aria-expanded="true" aria-controls="accordion-panel-1" data-accordion-header>
+        Item 1
+      </button>
+    </h3>
+    <section id="accordion-panel-1" aria-labelledby="accordion-header-1">
+      <p>Lorem ipsum dolor sit amet...</p>
+    </section>
+    <h3>
+      <button id="accordion-header-2" aria-expanded="false" aria-controls="accordion-panel-2" data-accordion-header>
+        Item 2
+      </button>
+    </h3>
+    <section id="accordion-panel-2" aria-labelledby="accordion-header-2" hidden>
+      <p>Lorem ipsum dolor sit amet...</p>
+    </section>
+
+    <!-- https://designsystem.digital.gov/components/card/ -->
+    <h2>Cards</h2>
+    <ul class="card-group">
+      <li class="card">
+        <div class="card__container">
+          <header class="card__header">
+            <h2 class="card__heading">Card</h2>
+          </header>
+          <div class="card__body">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis earum
+              tenetur quo cupiditate, eaque qui officia recusandae. Excepturi nobis
+              dolores molestias! Quas quisquam a officia eos.
+            </p>
+          </div>
+          <div class="card__footer">
+            <button class="default-button">Visit Florida Keys</button>
+          </div>
         </div>
+      </li>
+      <li class="card">
+        <div class="card__container">
+          <header class="card__header">
+            <h2 class="card__heading">Card with media</h2>
+          </header>
+          <div class="card__media">
+            <div class="card__img">
+              <img
+                src="https://designsystem.digital.gov/img/introducing-uswds-2-0/built-to-grow--alt.jpg"
+                alt="A placeholder image"
+              />
+            </div>
+          </div>
+          <div class="card__body">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis earum
+              tenetur quo cupiditate, eaque qui officia recusandae. Excepturi nobis
+              dolores molestias! Quas quisquam a officia eos.
+            </p>
+          </div>
+          <div class="card__footer">
+            <button class="default-button">Visit Florida Keys</button>
+          </div>
+        </div>
+      </li>
+    </ul>
 
-        <!-- https://www.aditus.io/patterns/accordion/ -->
-        <h2>Accordions</h2>
-            <h3>
-                <button id="accordion-header-1" 
-                    aria-expanded="true" 
-                    aria-controls="accordion-panel-1" 
-                    data-accordion-header
-                    >
-                  Item 1
-                </button>
-              </h3>
-              <section id="accordion-panel-1"
-                        aria-labelledby="accordion-header-1"
-                        >
-                <p>Lorem ipsum dolor sit amet...</p>
-              </section>
-              <h3>
-                <button id="accordion-header-2" 
-                    aria-expanded="false" 
-                    aria-controls="accordion-panel-2" 
-                    data-accordion-header
-                    >
-                  Item 2
-                </button>
-              </h3>
-            <section id="accordion-panel-2"
-                      aria-labelledby="accordion-header-2"
-                      hidden
-                      >
-              <p>Lorem ipsum dolor sit amet...</p>
-            </section>
-    </main>
-    <footer>
+  </main>
+  <footer>
 
-    </footer>
+  </footer>
 </body>
+
 </html>
